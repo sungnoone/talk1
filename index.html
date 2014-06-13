@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>GAP</title>
+    <!--<link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.10.4.css">-->
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.2.css">
+    <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.2.css">
+    <link rel="stylesheet" href="css/jquery.mobile.theme-1.4.2.css">
+    <link rel="stylesheet" href="css/jquery.mobile.inline-svg-1.4.2.css">
+    <link rel="stylesheet" href="css/jquery.mobile.inline-png-1.4.2.css">
+    <link rel="stylesheet" href="css/jquery.mobile.icons-1.4.2.css">
+    <link rel="stylesheet" href="css/jquery.mobile.external-png-1.4.2.css">
+    <link rel="stylesheet" href="css/gap.css">
+    <script src="js/jquery-2.1.0.js"></script>
+    <!--<script src="js/jquery-ui-1.10.4.js"></script>-->
+    <script src="js/jquery.mobile-1.4.2.js"></script>
+    <script src="js/strophe.js"></script>
+    <!--<script src="js/strophe.register.js"></script>-->
+    <!--<script src="js/flXHR.js"></script>-->
+    <!--<script src="js/strophe.flxhr.js"></script>-->
+    <script src="js/gap.js"></script>
+</head>
+<body>
+<div data-role="page" id="page_main" style="margin-top: 20px">
+    <div data-role="content" id="page_main_content"><!--主頁-->
+        <div data-role="tabs" id="tabs"><!--主頁籤-->
+
+            <div data-role="navbar">
+                <ul>
+                    <li><a id="li_tab2" href="#tab2" data-ajax="false">通訊錄</a></li>
+                    <li><a id="li_tab1" href="#tab1" data-ajax="false">聊天</a></li>
+                    <li><a id="li_tab3" href="#tab3" data-ajax="false">設定</a></li>
+                </ul>
+            </div>
+
+            <div id="tab2"><!--通訊錄-->
+                <form id="contact_form" style="margin-top: 20px">
+                    <input id="contact_button" data-role="none" type="button" value="取得通訊錄" onclick="btn_get_contact();" />
+                    <ul id="contact_ul" data-role="listview" style="margin-top: 20px">
+                    </ul>
+                </form>
+            </div><!--通訊錄-->
+
+            <div id="tab1" class="ui-body-d ui-content"><!--聊天頁-->
+                <div id="chat-title"></div>
+                <div id="tab_chat">
+                    <div id="chat-area"></div>
+                </div>
+                <textarea id="chat_input"></textarea>
+                <input id="chat-send" data-role="none" type="button" value="傳送" onclick="chat_send();" />
+                <div id="chat-msg"></div>
+            </div><!--聊天頁-->
+
+            <div data-role="tabs" id="tab3" style="margin-top: 20px"><!--設定頁-->
+                <div data-role="navbar">
+                    <ul>
+                        <li><a id="li_tab3_1" href="#tab3_1" data-ajax="false">連線主控</a></li>
+                        <li><a id="li_tab3_2" href="#tab3_2" data-ajax="false">服務搜尋</a></li>
+                        <li><a id="li_tab3_3" href="#tab3_3" data-ajax="false">帳號管理</a></li>
+                    </ul>
+                </div>
+                <div id="tab3_1" style="margin-top: 20px">
+                    <form>
+                        <input id="connect_button" data-role="none" type="button" value="Connect" onclick="btn_connect();" />
+                        <input id="send_button" data-role="none" type="button" value="Send Data" onclick="btn_send();" />
+                        <input id="disconnect_button" data-role="none" type="button" value="Disconnect" onclick="btn_disconnect();" />
+                        <input id="clear_message_button" data-role="none" type="button" value="Clear Message" onclick="btn_clear_msg();" />
+                        <input id="register_user_button" data-role="none" type="button" value="Register User" onclick="btn_register_user();" />
+                    </form>
+                    <form>
+                        <div id="input_area" class="ui-content">
+                            <textarea id="input"></textarea>
+                        </div>
+                        <div id="console">
+                        </div>In
+                        <div id="message">
+                        </div>
+                    </form>
+                </div>
+                <div id="tab3_2">
+                    <div class="left">
+                        <input id="dig_info_button" data-role="none" type="button" value="Dig info" onclick="on_query_service_info()" />
+                        <div id="info_list"></div>
+                    </div>
+                    <div class="right">
+                        <input id="dig_item_button" data-role="none" type="button" value="Dig item" onclick="on_query_service_item()" />
+                        <div id="item_list"></div>
+                    </div>
+                </div>
+                <div id="tab3_3">
+                    <div>
+                        <form>
+                            <label>帳號</label>
+                            <input id="text_username" data-role="none" type="text" />
+                            <label>密碼</label>
+                            <input id="text_password" data-role="none" type="password" />
+                            <label>確認密碼</label>
+                            <input id="text_password_confirm" data-role="none" type="password" />
+                            <label>使用者名稱</label>
+                            <input id="text_name" data-role="none" type="text" />
+                            <label>電子郵件</label>
+                            <input id="text_email" data-role="none" type="text" />
+                            <label>群組</label>
+                            <input id="text_group" data-role="none" type="text" />
+                        </form>
+                    </div>
+                    <div id="tab3_3_message"></div>
+                </div>
+
+            </div><!--設定頁-->
+
+        </div><!--主頁籤-->
+    </div><!--主頁-->
+</div>
+
+</body>
+</html>

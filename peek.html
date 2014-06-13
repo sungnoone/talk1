@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.2.css">
+    <link rel="stylesheet" href="css/peek.css">
+    <script src="js/jquery-2.1.0.js"></script>
+    <script src="js/strophe.js"></script>
+    <!--<script src="js/flXHR.js"></script>-->
+    <!--<script src="js/strophe.flxhr.js"></script>-->
+    <script src="js/peek.js"></script>
+</head>
+<body>
+<div data-role="page">
+    <div data-role="header">
+        <h1>Peek</h1>
+    </div>
+    <div data-role="content">
+        <div id="input_area" class="ui-content">
+            <textarea id="input" class="disabled" onkeypress="input_keypress();"></textarea>
+        </div>
+        <div id="console">
+        </div>
+        <div id="message">
+        </div>
+        <div id="buttonbar">
+            <input id="connect_button" type="submit" value="Connect" onclick="btn_connect();" />
+            <input id="send_button" type="submit" value="Send Data" onclick="btn_send();" />
+            <input id="disconnect_button" type="submit" value="Disconnect" onclick="btn_disconnect();" />
+            <input id="clear_message_button" type="submit" value="Clear Message" onclick="btn_clear_msg();" />
+        </div>
+        </br>
+        </br>
+        </br>
+        <!-- login dialog -->
+        <div id="login_dialog">
+            <label>JID:</label>
+            <input type="text" id="jid"/>
+            </br>
+            <label>Password:</label>
+            <input type="password" id="password"/>
+        </div>
+    </div>
+    <div data-role="footer">
+        <h1>SNOONE</h1>
+    </div>
+</div>
+</body>
+</html>

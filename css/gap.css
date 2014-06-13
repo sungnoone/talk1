@@ -1,0 +1,130 @@
+body {
+     font-family: Helvetica;
+ }
+h1 {
+    text-align: center;
+}
+.hidden {
+    display: none
+}
+
+.button {
+    padding: 10px;
+    background-color: #ddd;
+    border: solid 1px #666;
+    font-weight: bold;
+}
+.button:hover {
+    background-color: #ddf;
+}
+
+#toolbar {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/*#chat-area {*/
+    /*float: left;*/
+    /*width: 600px;*/
+    /*height: 300px;*/
+/*}*/
+
+/*.chat-messages {*/
+    /*height: 180px;*/
+    /*border-bottom: solid 2px #ddd;*/
+    /*overflow: auto;*/
+/*}*/
+
+/*#chat-area input {*/
+    /*margin-top: 20px;*/
+    /*width: 95%;*/
+/*}*/
+
+/*#roster-area {*/
+    /*float: right;*/
+    /*border-left: solid 2px #ddd;*/
+    /*padding: 10px;*/
+    /*width: 250px;*/
+    /*height: 300px;*/
+/*}*/
+
+/*.chat-name {*/
+    /*color: #c33;*/
+/*}*/
+
+/*.chat-message .me {*/
+    /*color: #33c;*/
+/*}*/
+/*.chat-event {*/
+    /*font-style: italic;*/
+    /*font-size: 75%;*/
+/*}*/
+
+/*.roster-contact {*/
+    /*padding: 3px;*/
+/*}*/
+
+/*.roster-contact:hover {*/
+    /*background-color: #aaa;*/
+    /*color: white;*/
+/*}*/
+
+/*.roster-name {*/
+    /*font-size: 150%;*/
+/*}*/
+
+/*.online {*/
+    /*color: #3c3;*/
+/*}*/
+
+/*.away {*/
+    /*color: #c33;*/
+/*}*/
+
+/*.offline {*/
+    /*color: #ccc;*/
+/*}*/
+
+#chat-area{
+    padding: 10px;
+    max-height: 500px;
+    border: solid 1px #aaa;
+    background-color: #ededed;
+    color: #000000;
+    font-family: monospace;
+    overflow: auto;
+}
+
+#console{
+     padding: 10px;
+     height: 300px;
+     border: solid 1px #aaa;
+     background-color: #000;
+     color: #eee;
+     font-family: monospace;
+     overflow: auto;
+ }
+
+#message{
+    padding: 10px;
+    height: 50px;
+    border: solid 1px #aaaaaa;
+    background-color: #ffff00;
+    color: #000000;
+    font-family: monospace;
+    overflow: auto;
+}
+
+.left {
+    padding: 10px;
+    width: 400px;
+    float: left;
+}
+
+.right {
+    padding: 10px;
+    border-left: solid 1px black;
+    width: 500px;
+    float: right;
+    background-color: #eee;
+}
